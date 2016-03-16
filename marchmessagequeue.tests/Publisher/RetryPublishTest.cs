@@ -7,10 +7,17 @@ namespace MarchMessageQueue.Tests.Publisher
     public class RetryPublishTest
     {
         [Fact]
-        public void Publish()
+        public void RetryMessagePublish()
         {
             IPublisher publisher = new RetryPublisher();
-            publisher.Publish((MessageBase)new RetryMessage());
+            publisher.Publish(new RetryMessage());
+        }
+
+        [Fact]
+        public void SayHelloMessagePublish()
+        {
+            IPublisher publisher = new RabbitMqPublish();
+            publisher.Publish(new SayHelloMessage());
         }
     }
 }

@@ -29,3 +29,34 @@
 \\Mac\Home\Documents\Visual Studio 2015\Projects\MarchMessageQueue\MarchMessageQueue.Tests\bin\Debug\StackExchange.Redis.pdb
 \\Mac\Home\Documents\Visual Studio 2015\Projects\MarchMessageQueue\MarchMessageQueue.Tests\bin\Debug\StackExchange.Redis.xml
 \\Mac\Home\Documents\Visual Studio 2015\Projects\MarchMessageQueue\MarchMessageQueue.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.abstractions.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.runner.utility.desktop.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\MarchMessageQueue.Tests.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\MarchMessageQueue.Tests.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\MarchMessageQueue.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.assert.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.core.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.execution.desktop.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\EasyNetQ.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\Hangfire.Core.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\StackExchange.Redis.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\Newtonsoft.Json.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\RabbitMQ.Client.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\Owin.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\MarchMessageQueue.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.assert.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.assert.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.core.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.core.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.execution.desktop.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\xunit.execution.desktop.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\EasyNetQ.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\Hangfire.Core.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\StackExchange.Redis.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\StackExchange.Redis.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\Newtonsoft.Json.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\bin\Debug\RabbitMQ.Client.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\obj\Debug\MarchMessageQueue.Tests.csprojResolveAssemblyReference.cache
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\obj\Debug\MarchMessageQueue.Tests.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue.tests\obj\Debug\MarchMessageQueue.Tests.pdb

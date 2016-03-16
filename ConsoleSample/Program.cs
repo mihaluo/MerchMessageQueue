@@ -16,6 +16,8 @@ namespace ConsoleSample
         static void Main(string[] args)
         {
 
+            MarchMessageQueueServer.Start();
+            return;
             var consumeType = typeof(SayHelloConsume);
 
 
@@ -47,6 +49,11 @@ namespace ConsoleSample
             {
                 Console.ReadLine();
             }
+        }        
+
+        public void TestSend()
+        {
+
         }
 
         public static void Test()

@@ -19,6 +19,8 @@ namespace MarchMessageQueue.Common
 
         public static Type[] GetTypesByInterfaceType(Type interfacType)
         {
+            if (interfacType == null) throw new ArgumentNullException(nameof(interfacType));
+
             Assembly assembly = interfacType.Assembly;
 
             List<Type> types = new List<Type>();

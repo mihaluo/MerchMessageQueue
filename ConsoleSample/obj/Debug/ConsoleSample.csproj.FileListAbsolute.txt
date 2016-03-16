@@ -24,3 +24,29 @@
 \\Mac\Home\Documents\Visual Studio 2015\Projects\MarchMessageQueue\ConsoleSample\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 \\Mac\Home\Documents\Visual Studio 2015\Projects\MarchMessageQueue\ConsoleSample\bin\Debug\StackExchange.Redis.pdb
 \\Mac\Home\Documents\Visual Studio 2015\Projects\MarchMessageQueue\ConsoleSample\bin\Debug\StackExchange.Redis.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\ConsoleSample.exe.config
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\ConsoleSample.exe
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\ConsoleSample.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Hangfire.Core.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Hangfire.SqlServer.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\MarchMessageQueue.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Microsoft.Owin.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Newtonsoft.Json.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Owin.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\EasyNetQ.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\StackExchange.Redis.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\RabbitMQ.Client.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\MarchMessageQueue.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Hangfire.Core.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Hangfire.SqlServer.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Microsoft.Owin.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Newtonsoft.Json.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\EasyNetQ.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\StackExchange.Redis.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\StackExchange.Redis.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\RabbitMQ.Client.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\obj\Debug\ConsoleSample.csprojResolveAssemblyReference.cache
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\obj\Debug\ConsoleSample.exe
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\obj\Debug\ConsoleSample.pdb

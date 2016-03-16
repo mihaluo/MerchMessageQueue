@@ -5,6 +5,8 @@ namespace MarchMessageQueue.Perform
 {
     public class ConsumerPerformer
     {
+        private const string ConsumeMethodName = "Consume";
+
         public PerformedContext Perform(PerformContext performContext)
         {
             PerformedContext performedContext = new PerformedContext(performContext);
@@ -12,7 +14,7 @@ namespace MarchMessageQueue.Perform
             {
                 object instance = Activator.CreateInstance(performContext.ConsumeType);
 
-                MethodInfo methodInfo = performContext.ConsumeType.GetMethod("Consume");
+                MethodInfo methodInfo = performContext.ConsumeType.GetMethod(ConsumeMethodName);
 
                 bool result = (bool)methodInfo.Invoke(instance, new[] { performContext.MessageObj });
 

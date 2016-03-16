@@ -97,10 +97,11 @@
     <Compile Include="Hangfire.Redis.Storage\RedisWriteOnlyTransaction.cs" />
     <Compile Include="Hangfire.Redis.Storage\SucceededStateHandler.cs" />
     <Compile Include="MapManager.cs" />
+    <Compile Include="MarchMessageQueueServer.cs" />
     <Compile Include="Perform\ConsumerPerformer.cs" />
     <Compile Include="Perform\PerformContext.cs" />
     <Compile Include="Perform\PerformedContext.cs" />
-    <Compile Include="RabbitBus.cs" />
+    <Compile Include="RabbitBusFactory.cs" />
     <Compile Include="Messages\MessageBase.cs" />
     <Compile Include="Messages\RetryMessage.cs" />
     <Compile Include="Messages\SayHelloMessage.cs" />
@@ -111,8 +112,8 @@
     <Compile Include="Scheduling\RetrySchedule.cs" />
     <Compile Include="Scheduling\ScheduleDto.cs" />
     <Compile Include="Subscriber\ISubscriber.cs" />
-    <Compile Include="Subscriber\ReTrySubscriber.cs" />
     <Compile Include="Subscriber\GeneralSubscriber.cs" />
+    <Compile Include="Subscriber\RetrySubscriber.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
