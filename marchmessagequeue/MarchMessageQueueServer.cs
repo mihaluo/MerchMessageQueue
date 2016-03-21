@@ -13,18 +13,22 @@ namespace MarchMessageQueue
     {
         public static void Start()
         {
-            RedisStorage redisStorage = new RedisStorage("210.14.146.56:6379");
+            RedisStorage redisStorage = new RedisStorage("192.168.1.37:6379");
             GlobalConfiguration.Configuration.UseStorage(redisStorage);
             var backgroundJobServer = new BackgroundJobServer();
 
             Type[] consumeTypes = TypeHelper.GetTypesByInterfaceType(typeof(IConsume<>));
             ISubscriber generalSubscriber = new GeneralSubscriber();
             ISubscriber retrySubscriber = new RetrySubscriber();
-
+            
             foreach (var consumeType in consumeTypes)
             {
-                generalSubscriber.Subscribe(consumeType);
-                retrySubscriber.Subscribe(consumeType);
+                for (int i = 0; i < 5; i++)
+                {
+                    generalSubscriber.Subscribe(consumeType);
+                    retrySubscriber.Subscribe(consumeType);
+                }
+              
             }
 
         }

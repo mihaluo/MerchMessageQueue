@@ -23,8 +23,8 @@ namespace MarchMessageQueue.Publisher
         public Task PublishAsnyc<TMessage>(TMessage message) where TMessage : MessageBase
         {
             var rabbitBus = RabbitBusFactory.GetRabbitBus();
-            var retryMessage = message as RetryMessage;
 
+            var retryMessage = message as RetryMessage;
             if (retryMessage != null)
             {
                 string queue = $"{typeof(RetryMessage).FullName}.{nameof(retryMessage.MessageType)}";

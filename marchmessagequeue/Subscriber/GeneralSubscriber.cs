@@ -1,4 +1,5 @@
 ﻿using System;
+using EasyNetQ;
 using EasyNetQ.NonGeneric;
 using MarchMessageQueue.Perform;
 using MarchMessageQueue.Scheduling;
@@ -9,7 +10,7 @@ namespace MarchMessageQueue.Subscriber
     {
         public void Subscribe(Type consumeType)
         {
-            var rabbitBus = RabbitBusFactory.GetRabbitBus();
+            var rabbitBus = RabbitHutch.CreateBus("host=192.168.1.37;port=5672;username=yanwei;password=123456");
             Type messageType = MapManager.GetMessageTypeByConsumeType(consumeType);
 
             rabbitBus.Subscribe(messageType, messageType.Name, messageObj =>
