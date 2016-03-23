@@ -8,6 +8,7 @@ namespace MarchMessageQueue.Consumer
         public bool Consume(SayHelloMessage message)
         {
             Console.WriteLine(message.Message);
+            Console.WriteLine();
             return false;
         }
     }

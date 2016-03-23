@@ -84,7 +84,7 @@ namespace MarchMessageQueue.Scheduling
 
         public static void RePublish(RetryMessage retryMessage)
         {
-            IPublisher retryPublisher = new RetryPublisher();
+            IPublisher retryPublisher = new KafkaRetryPublisher();
             retryPublisher.Publish(retryMessage);
         }
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using MarchMessageQueue.Messages;
 
 namespace MarchMessageQueue.Subscriber

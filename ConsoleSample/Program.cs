@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Hangfire;
 using MarchMessageQueue;
 using MarchMessageQueue.Common;
@@ -15,9 +16,21 @@ namespace ConsoleSample
     {
         static void Main(string[] args)
         {
-
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            IPublisher kafkaPublisher = new KafkaPublisher();
+            for (int i = 0; i < 10000; i++)
+            {
+                TestMessage testMessage = new TestMessage
+                {
+                    Message = Guid.NewGuid().ToString()
+                };
+                kafkaPublisher.Publish(testMessage);
+            }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds.ToString());
+            Console.ReadKey();
             MarchMessageQueueServer.Start();
-            return;
+            Console.Read();
             var consumeType = typeof(SayHelloConsume);
 
 
@@ -39,10 +52,10 @@ namespace ConsoleSample
                 Message = "hello world!"
             });
 
-            ISubscriber subscriber = new GeneralSubscriber();
+            ISubscriber subscriber = new RabbitMqGeneralSubscriber();
             subscriber.Subscribe(consumeType);
 
-            ISubscriber retrySubscriber = new RetrySubscriber();
+            ISubscriber retrySubscriber = new RabbitMqReTrySubscriber();
             retrySubscriber.Subscribe(consumeType);
 
             using (var backgroundJobServer = new BackgroundJobServer())
