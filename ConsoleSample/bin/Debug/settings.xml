@@ -1,0 +1,64 @@
+﻿<configuration>
+  <!--lets you reference types from that assembly by specifying just their name, instead of assembly qualified full name.-->
+  <using assembly="MarchMessageQueue" />
+  <using assembly="Hangfire.Core"/>
+  
+  <installers>
+    <!--<install type="MarchMessageQueue.Dependency.KafkaInstall,MarchMessageQueue"/>-->
+  </installers>
+
+  <properties>
+    <hosts>http://192.168.1.37:9092</hosts>
+    <RedisHost>192.168.1.37:6379</RedisHost>
+  </properties>
+
+  <facilities>
+  </facilities>
+
+  <components>
+
+    <component
+          id="MarchMessageQueue.Publisher.Publisher"
+          service="MarchMessageQueue.Publisher.IPublisher, MarchMessageQueue"
+          type="MarchMessageQueue.Publisher.KafkaPublisher, MarchMessageQueue">
+      <parameters>
+        <hosts>#{hosts}</hosts>
+      </parameters>
+    </component>
+    <component
+           id="MarchMessageQueue.Publisher.RetryPublisher"
+           service="MarchMessageQueue.Publisher.IRetryPublisher, MarchMessageQueue"
+           type="MarchMessageQueue.Publisher.KafkaRetryPublisher, MarchMessageQueue">
+      <parameters>
+        <hosts>#{hosts}</hosts>
+      </parameters>
+    </component>
+    <component
+           id="MarchMessageQueue.Subscriber.GeneralSubscriber"
+           service="MarchMessageQueue.Subscriber.ISubscriber, MarchMessageQueue"
+           type="MarchMessageQueue.Subscriber.KafkaGeneralSubscriber, MarchMessageQueue">
+      <parameters>
+        <hosts>#{hosts}</hosts>
+      </parameters>
+    </component>
+    <component
+           id="MarchMessageQueue.Subscriber.RetrySubscriber"
+           service="MarchMessageQueue.Subscriber.IRetrSubscriber, MarchMessageQueue"
+           type="MarchMessageQueue.Subscriber.KafkaRetrySubscriber, MarchMessageQueue">
+      <parameters>
+        <hosts>#{hosts}</hosts>
+      </parameters>
+    </component>
+    
+    <component
+           id="MarchMessageQueue.Hangfire.Redis.Storage.RedisStorage"
+           service="Hangfire.JobStorage, Hangfire.Core"
+           type="MarchMessageQueue.Hangfire.Redis.Storage.RedisStorage, MarchMessageQueue">
+      <parameters>
+        <connectionString>#{RedisHost}</connectionString>
+      </parameters>
+    </component>
+
+
+  </components>
+</configuration>

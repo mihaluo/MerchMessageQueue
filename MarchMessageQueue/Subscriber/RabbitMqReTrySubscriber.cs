@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Threading.Tasks;
 using MarchMessageQueue.Common;
 using MarchMessageQueue.Messages;
 using MarchMessageQueue.Perform;
 using MarchMessageQueue.Scheduling;
-using Newtonsoft.Json;
 
 namespace MarchMessageQueue.Subscriber
 {
-    public class RabbitMqReTrySubscriber : ISubscriber
+    public class RabbitMqReTrySubscriber : Rabbit, IRetrSubscriber
     {
         public void Subscribe(Type consumeType)
         {
-            var rabbitBus = RabbitBusFactory.GetRabbitBus();
+            var rabbitBus = GetRabbitBus();
 
             Type messageType = MapManager.GetMessageTypeByConsumeType(consumeType);
             string queue = $"{typeof(RetryMessage).FullName}.{messageType.Name}";

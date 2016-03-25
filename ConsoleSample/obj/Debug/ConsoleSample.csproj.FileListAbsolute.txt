@@ -77,3 +77,8 @@ C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\obj\Debug\Cons
 \\Mac\Home\Documents\GitHubVisualStudio\MarchMessageQueue\ConsoleSample\obj\Debug\ConsoleSample.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\GitHubVisualStudio\MarchMessageQueue\ConsoleSample\obj\Debug\ConsoleSample.exe
 \\Mac\Home\Documents\GitHubVisualStudio\MarchMessageQueue\ConsoleSample\obj\Debug\ConsoleSample.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\kafka-net.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Castle.Core.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Castle.Windsor.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Castle.Core.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\ConsoleSample\bin\Debug\Castle.Windsor.xml

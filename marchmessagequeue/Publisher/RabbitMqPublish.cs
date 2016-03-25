@@ -4,17 +4,18 @@ using MarchMessageQueue.Messages;
 
 namespace MarchMessageQueue.Publisher
 {
-    public class RabbitMqPublish : IPublisher
+    public class RabbitMqPublish : Rabbit, IPublisher
     {
-        public void Publish<TMessage>(TMessage message) where TMessage : MessageBase
+        public async void Publish<TMessage>(TMessage message) where TMessage : MessageBase
         {
-            var rabbitBus = RabbitBusFactory.GetRabbitBus();
-            rabbitBus.Publish(message);
+            var rabbitBus = GetRabbitBus();
+           await rabbitBus.PublishAsync(message);
         }
 
         public Task PublishAsnyc<TMessage>(TMessage message) where TMessage : MessageBase
         {
-            throw new System.NotImplementedException();
+            var rabbitBus = GetRabbitBus();
+            return rabbitBus.PublishAsync(message);
         }
     }
 }

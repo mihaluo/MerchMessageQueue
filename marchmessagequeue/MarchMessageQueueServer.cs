@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using EasyNetQ.Internals;
+﻿using System.Threading.Tasks;
 using Hangfire;
 using MarchMessageQueue.Common;
 using MarchMessageQueue.Consumer;
-using MarchMessageQueue.Hangfire.Redis.Storage;
+using MarchMessageQueue.Dependency;
 using MarchMessageQueue.Subscriber;
 
 namespace MarchMessageQueue
@@ -18,13 +13,13 @@ namespace MarchMessageQueue
         {
             Task.Factory.StartNew(() =>
             {
-                RedisStorage redisStorage = new RedisStorage("192.168.1.37:6379");
+                var redisStorage = IocManager.Instance.Resolve<JobStorage>();
                 GlobalConfiguration.Configuration.UseStorage(redisStorage);
                 var backgroundJobServer = new BackgroundJobServer();
 
-                Type[] consumeTypes = TypeHelper.GetTypesByInterfaceType(typeof(IConsume<>));
-                ISubscriber generalSubscriber = new KafkaGeneralSubscriber();
-                ISubscriber retrySubscriber = new KafkaRetrySubscriber();
+                var consumeTypes = TypeHelper.GetTypesByInterfaceType(typeof (IConsume<>));
+                var generalSubscriber = IocManager.Instance.Resolve<ISubscriber>();
+                var retrySubscriber = IocManager.Instance.Resolve<IRetrSubscriber>();
 
                 foreach (var consumeType in consumeTypes)
                 {
@@ -35,11 +30,8 @@ namespace MarchMessageQueue
                         //generalSubscriber.Subscribe(consumeType);
                         //retrySubscriber.Subscribe(consumeType);
                     }
-
                 }
-            },TaskCreationOptions.LongRunning);
-
-
+            }, TaskCreationOptions.LongRunning);
         }
     }
 }

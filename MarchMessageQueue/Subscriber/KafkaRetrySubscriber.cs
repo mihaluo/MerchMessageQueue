@@ -9,8 +9,18 @@ using MarchMessageQueue.Scheduling;
 
 namespace MarchMessageQueue.Subscriber
 {
-    public class KafkaRetrySubscriber : Kafka, ISubscriber
+    public class KafkaRetrySubscriber : Kafka, IRetrSubscriber
     {
+        public KafkaRetrySubscriber()
+        {
+
+        }
+
+        public KafkaRetrySubscriber(string hosts) : base(hosts)
+        {
+
+        }
+
         public void Subscribe(Type consumeType)
         {
             Type messageType = MapManager.GetMessageTypeByConsumeType(consumeType);

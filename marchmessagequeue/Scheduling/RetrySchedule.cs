@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Hangfire;
 using MarchMessageQueue.Common;
+using MarchMessageQueue.Dependency;
 using MarchMessageQueue.Messages;
 using MarchMessageQueue.Perform;
 using MarchMessageQueue.Publisher;
@@ -84,7 +85,7 @@ namespace MarchMessageQueue.Scheduling
 
         public static void RePublish(RetryMessage retryMessage)
         {
-            IPublisher retryPublisher = new KafkaRetryPublisher();
+            IRetryPublisher retryPublisher = IocManager.Instance.Resolve<IRetryPublisher>();
             retryPublisher.Publish(retryMessage);
         }
     }

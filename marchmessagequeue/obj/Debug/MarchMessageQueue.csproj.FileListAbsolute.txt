@@ -68,3 +68,8 @@ C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\marchmessagequeue\obj\Debug\
 \\Mac\Home\Documents\GitHubVisualStudio\MarchMessageQueue\MarchMessageQueue\obj\Debug\MarchMessageQueue.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\GitHubVisualStudio\MarchMessageQueue\MarchMessageQueue\obj\Debug\MarchMessageQueue.dll
 \\Mac\Home\Documents\GitHubVisualStudio\MarchMessageQueue\MarchMessageQueue\obj\Debug\MarchMessageQueue.pdb
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\MarchMessageQueue\bin\Debug\kafka-net.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\MarchMessageQueue\bin\Debug\Castle.Core.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\MarchMessageQueue\bin\Debug\Castle.Windsor.dll
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\MarchMessageQueue\bin\Debug\Castle.Core.xml
+C:\work\gitrepo\MarchMessageQueue\MerchMessageQueue\MarchMessageQueue\bin\Debug\Castle.Windsor.xml

@@ -6,11 +6,11 @@ using MarchMessageQueue.Scheduling;
 
 namespace MarchMessageQueue.Subscriber
 {
-    public class RabbitMqGeneralSubscriber : ISubscriber
+    public class RabbitMqGeneralSubscriber : Rabbit, ISubscriber
     {
         public void Subscribe(Type consumeType)
         {
-            var rabbitBus = RabbitBusFactory.GetRabbitBus();
+            var rabbitBus = GetRabbitBus();
             Type messageType = MapManager.GetMessageTypeByConsumeType(consumeType);
 
             rabbitBus.Subscribe(messageType, messageType.Name, messageObj =>

@@ -9,7 +9,7 @@ namespace MarchMessageQueue.Consumer
         {
             Console.WriteLine(message.Message);
             Console.WriteLine();
-            return false;
+            return true;
         }
     }
 }

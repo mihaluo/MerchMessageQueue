@@ -13,7 +13,7 @@ namespace MarchMessageQueue.Tests.Publisher
         public void GeneralPublish()
         {
             IPublisher publisher = new KafkaPublisher();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10000; i++)
             {
                 SayHelloMessage sayHelloMessage = new SayHelloMessage
                 {

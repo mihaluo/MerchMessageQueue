@@ -1,18 +1,19 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using MarchMessageQueue.Messages;
 
 namespace MarchMessageQueue.Publisher
 {
-    public class RabbitMqRetryPublisher : IPublisher
+    public class RabbitMqRetryPublisher : Rabbit, IRetryPublisher
     {
         public void Publish<TMessage>(TMessage message) where TMessage : MessageBase
         {
-            var rabbitBus = RabbitBusFactory.GetRabbitBus();
+            var rabbitBus = GetRabbitBus();
 
             var retryMessage = message as RetryMessage;
             if (retryMessage != null)
             {
-                string queue = $"{typeof(RetryMessage).FullName}.{retryMessage.MessageType.Name}";
+                string queue = GetQueueName(retryMessage.MessageType);
                 rabbitBus.Send(queue, message);
                 return;
             }
@@ -22,17 +23,22 @@ namespace MarchMessageQueue.Publisher
 
         public Task PublishAsnyc<TMessage>(TMessage message) where TMessage : MessageBase
         {
-            var rabbitBus = RabbitBusFactory.GetRabbitBus();
-            var retryMessage = message as RetryMessage;
+            var rabbitBus = GetRabbitBus();
 
+            var retryMessage = message as RetryMessage;
             if (retryMessage != null)
             {
-                string queue = $"{typeof(RetryMessage).FullName}.{nameof(retryMessage.MessageType)}";
+                string queue = GetQueueName(retryMessage.MessageType);
                 return rabbitBus.SendAsync(queue, message);
-
             }
 
             return rabbitBus.PublishAsync(message);
+        }
+
+
+        private string GetQueueName(Type messageType)
+        {
+            return $"{typeof(RetryMessage).FullName}.{nameof(messageType)}";
         }
     }
 }

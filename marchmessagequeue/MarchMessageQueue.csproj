@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EasyNetQ, Version=0.55.0.425, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EasyNetQ.0.55.0.425\lib\net45\EasyNetQ.dll</HintPath>
       <Private>True</Private>
@@ -84,6 +92,9 @@
     <Compile Include="Common\TypeHelper.cs" />
     <Compile Include="Consumer\IConsume.cs" />
     <Compile Include="Consumer\SayHelloConsume.cs" />
+    <Compile Include="Dependency\IocManager.cs" />
+    <Compile Include="Dependency\KafkaInstall.cs" />
+    <Compile Include="Dependency\RabbitMqInstall.cs" />
     <Compile Include="Hangfire.Redis.Storage\DeletedStateHandler.cs" />
     <Compile Include="Hangfire.Redis.Storage\FailedStateHandler.cs" />
     <Compile Include="Hangfire.Redis.Storage\FetchedJobsWatcher.cs" />
@@ -107,11 +118,11 @@
     <Compile Include="Perform\ConsumerPerformer.cs" />
     <Compile Include="Perform\PerformContext.cs" />
     <Compile Include="Perform\PerformedContext.cs" />
+    <Compile Include="Publisher\IRetryPublisher.cs" />
     <Compile Include="Publisher\KafkaPublisher.cs" />
     <Compile Include="Publisher\KafkaRetryPublisher.cs" />
     <Compile Include="Publisher\RabbitMqRetryPublisher.cs" />
     <Compile Include="Rabbit.cs" />
-    <Compile Include="RabbitBusFactory.cs" />
     <Compile Include="Messages\MessageBase.cs" />
     <Compile Include="Messages\RetryMessage.cs" />
     <Compile Include="Messages\SayHelloMessage.cs" />
@@ -120,13 +131,24 @@
     <Compile Include="Publisher\RabbitMqPublish.cs" />
     <Compile Include="Scheduling\RetrySchedule.cs" />
     <Compile Include="Scheduling\ScheduleDto.cs" />
+    <Compile Include="settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>settings.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriber\IRetrSubscriber.cs" />
     <Compile Include="Subscriber\ISubscriber.cs" />
     <Compile Include="Subscriber\KafkaGeneralSubscriber.cs" />
     <Compile Include="Subscriber\KafkaRetrySubscriber.cs" />
     <Compile Include="Subscriber\RabbitMqGeneralSubscriber.cs" />
     <Compile Include="Subscriber\RabbitMqReTrySubscriber.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="settings.xml">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>settings.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

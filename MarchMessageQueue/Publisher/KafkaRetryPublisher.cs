@@ -8,8 +8,18 @@ using MarchMessageQueue.Messages;
 
 namespace MarchMessageQueue.Publisher
 {
-    public class KafkaRetryPublisher : Kafka, IPublisher
+    public class KafkaRetryPublisher : Kafka, IRetryPublisher
     {
+        public KafkaRetryPublisher()
+        {
+            
+        }
+
+        public KafkaRetryPublisher(string hosts) : base(hosts)
+        {
+
+        }
+
         public void Publish<TMessage>(TMessage message) where TMessage : MessageBase
         {
             var producer = GetProducer();
